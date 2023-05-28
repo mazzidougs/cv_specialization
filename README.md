@@ -14,7 +14,7 @@ A estrutura do projeto é a seguinte:
 ```bash
 .
 ├── alarm.wav
-├── main.py
+├── drowsiness_detection.py
 ├── requirements.txt
 └── shape_predictor_68_face_landmarks.dat
 ```
@@ -22,7 +22,7 @@ A estrutura do projeto é a seguinte:
 Descrição dos arquivos:
 
 * `alarm.wav`: som de alarme que será tocado quando sinais de fadiga são detectados.
-* `main.py`: script Python principal que contém a lógica do detector de fadiga.
+* `drowsiness_detection.py`: script Python principal que contém a lógica do detector de fadiga.
 * `requirements.txt`: arquivo que lista as dependências necessárias para executar o programa.
 * `shape_predictor_68_face_landmarks.dat`: arquivo de dados usado pelo detector de marcos faciais do dlib.
 
@@ -36,15 +36,16 @@ pip install -r requirements.txt
 
 ## Execução do Projeto
 
-Para executar o projeto, você precisa passar algumas opções para o `script main.py`. As opções disponíveis são:
+Para executar o projeto, você precisa passar algumas opções para o `script drowsiness_detection.py`. As opções disponíveis são:
 
 * `-a` ou `--alarme`: define se o programa deve tocar um alarme sonoro quando detectar sinais de fadiga. Se definido como 1, o alarme será tocado. Se definido como 0, nenhum alarme será tocado. O padrão é 0.
 * `-w` ou `--webcam`: define o índice da webcam a ser usado para o fluxo de vídeo. O padrão é 0.
 
-Aqui está um exemplo de como executar o script `main.py`:
+Aqui está um exemplo de como executar o script `drowsiness_detection.py`:
 
 ```bash
-python main.py -a 1 -w 0
+windows: python drowsiness_detection.py -a 1 -w 0
+macos (Monterey 12.6.6): python3 drowsiness_detection.py 
 ```
 
 Este comando irá iniciar o detector de fadiga com um alarme sonoro e usará a webcam de índice 0 para o fluxo de vídeo.
@@ -68,5 +69,3 @@ O programa utiliza o detector de marcos faciais do dlib para determinar a posiç
 ## Referências Bibliográficas
 
 SOUKUPOVA, Tereza; CECH, Jan. [Real-time eye blink detection using facial landmarks](https://vision.fe.uni-lj.si/cvww2016/proceedings/papers/05.pdf). In: 21st computer vision winter workshop, Rimske Toplice, Slovenia. 2016.
-
-
