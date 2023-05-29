@@ -1,8 +1,0 @@
-cv2
-scipy
-imutils
-numpy
-playsound
-argparse
-dlib
-matplotlib
